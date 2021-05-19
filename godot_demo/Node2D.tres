@@ -30,17 +30,19 @@ void fragment() {
 	float u = UV.x;
 	float v = UV.y;
     float a = (u + (v)*tilt)*pitch - screen_center;
+	
+	vec2 half_pixel = TEXTURE_PIXEL_SIZE / 2.0;
     // Red
     int view = determine_view(a);
-    float r = texture(screen, vec3(float(u), float(v), float(view))).r;
+    float r = texture(screen, vec3(float(u) + half_pixel.x, float(v) + half_pixel.y, float(view))).r;
     
     // Green
     view = determine_view(a+subp);
-    float g = texture(screen, vec3(float(u), float(v), float(view))).g;
+    float g = texture(screen, vec3(float(u) + half_pixel.x, float(v) + half_pixel.y, float(view))).g;
     
     // Blue
     view = determine_view(a+2.0*subp);
-    float b = texture(screen, vec3(float(u), float(v), float(view))).b;
+    float b = texture(screen, vec3(float(u) + half_pixel.x, float(v) + half_pixel.y, float(view))).b;
 	
 	vec3 rgb = vec3(r, g, b);
 	COLOR.rgb = rgb;
