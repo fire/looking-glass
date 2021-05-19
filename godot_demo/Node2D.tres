@@ -1,0 +1,61 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=2]
+
+[sub_resource type="Shader" id=1]
+code = "shader_type canvas_item;
+
+uniform float screen_width = 1536;
+uniform float screen_height = 2048;
+uniform float screen_slope = -7.142918822023782;
+uniform float screen_pitch = 52.58654117140743;
+uniform float screen_center = 0.17349151971857157;
+uniform float dpi = 324.0;
+
+uniform int NUM_FRAMES = 45;
+uniform sampler2DArray screen;
+int determine_view(float a) {
+    int res = NUM_FRAMES - 1;
+    a = mod(a, 1) * float(NUM_FRAMES);
+    res -= int(a);
+    return res;
+}   
+
+void fragment() {
+	// Physical image width
+	const float screen_inches = screen_width / dpi;
+
+	const float pitch = screen_pitch * screen_inches * cos(atan(1.0/screen_slope));
+	const float tilt = float(screen_height)/(screen_width * screen_slope);
+	const float subp = 1.0 / (3.0*screen_width) * screen_pitch;
+		
+	float u = UV.x;
+	float v = UV.y;
+    float a = (u + (v)*tilt)*pitch - screen_center;
+    // Red
+    int view = determine_view(a);
+    float r = texture(screen, vec3(float(u), float(v), float(view))).r;
+    
+    // Green
+    view = determine_view(a+subp);
+    float g = texture(screen, vec3(float(u), float(v), float(view))).g;
+    
+    // Blue
+    view = determine_view(a+2.0*subp);
+    float b = texture(screen, vec3(float(u), float(v), float(view))).b;
+	
+	vec3 rgb = vec3(r, g, b);
+	COLOR.rgb = rgb;
+}"
+
+[sub_resource type="Texture2DArray" id=2]
+
+[resource]
+resource_local_to_scene = true
+shader = SubResource( 1 )
+shader_param/screen_width = 1536.0
+shader_param/screen_height = 2048.0
+shader_param/screen_slope = -7.14292
+shader_param/screen_pitch = 52.5865
+shader_param/screen_center = 0.173492
+shader_param/dpi = 324.0
+shader_param/NUM_FRAMES = null
+shader_param/screen = SubResource( 2 )
