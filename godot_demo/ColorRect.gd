@@ -103,15 +103,13 @@ func _ready():
 	images.push_back(image_43);
 	images.push_back(image_44);
 	
-	var count : int = 0
 	var texture_array : Texture2DArray = Texture2DArray.new()
 	var texture_images : Array = []
 	for path in images:
-		var image : Image = Image.new()
-		image.convert(Image.FORMAT_RGBA8)
-		image.load(path)
-		texture_images.push_back(image)
-		count = count + 1
+		var tex : Texture2D = ResourceLoader.load(path)
+		var img : Image = tex.get_image()
+		img.convert(Image.FORMAT_RGBA8)
+		texture_images.push_back(img)
 	
 	texture_array.create_from_images(texture_images)
 	material.set_shader_param("screen", texture_array)
