@@ -1,17 +1,19 @@
-[gd_scene load_steps=4 format=3 uid="uid://cn0sndcyco14r"]
+[gd_scene load_steps=5 format=3 uid="uid://cn0sndcyco14r"]
 
 [ext_resource type="Script" path="res://ColorRect.gd" id="1"]
 [ext_resource type="Shader" path="res://looking_glass.gdshader" id="1_eq0xu"]
+[ext_resource type="StreamTexture2DArray" uid="uid://dld024brirkhd" path="res://demo/numbered_quilt.png" id="2_2cc11"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_2uj00"]
 shader = ExtResource( "1_eq0xu" )
-shader_param/calibration_width = null
-shader_param/calibration_height = null
-shader_param/calibration_slope = null
-shader_param/calibration_pitch = null
-shader_param/calibration_center = null
-shader_param/calibration_dpi = null
-shader_param/NUM_FRAMES = null
+shader_param/calibration_width = 1536.0
+shader_param/calibration_height = 2048.0
+shader_param/calibration_slope = -7.14292
+shader_param/calibration_pitch = 52.5865
+shader_param/calibration_center = 0.173492
+shader_param/calibration_dpi = 324.0
+shader_param/NUM_FRAMES = 45
+shader_param/screen = ExtResource( "2_2cc11" )
 
 [node name="Node2D" type="Node2D"]
 script = null
@@ -25,4 +27,4 @@ script = ExtResource( "1" )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-quilt = "res://demo/three_vrm_girl_quilt.png"
+quilt = "res://demo/numbered_quilt.png"

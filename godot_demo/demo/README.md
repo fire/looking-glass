@@ -11,7 +11,7 @@ python ../../quilt2native.py ../../visual.default.json  ./three_vrm_girl_quilt.p
 Testing Quilt.
 
 ```
-python ../../gen_numbers_quilt.py 5 9 ./numbered_quilt.png 1536 2048
+python ../../gen_numbers_quilt.py 5 9 ./numbered_quilt.png 4096 4096
 ```
 
 
