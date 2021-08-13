@@ -1,7 +1,4 @@
-[gd_resource type="ShaderMaterial" load_steps=3 format=2]
-
-[sub_resource type="Shader" id=1]
-code = "shader_type canvas_item;
+shader_type canvas_item;
 
 uniform float calibration_width = 1536;
 uniform float calibration_height = 2048;
@@ -51,18 +48,4 @@ void fragment() {
 	
 	vec3 rgb = vec3(r, g, b);
 	COLOR.rgb = rgb;
-}"
-
-[sub_resource type="Texture2DArray" id=2]
-
-[resource]
-resource_local_to_scene = true
-shader = SubResource( 1 )
-shader_param/calibration_width = 1536.0
-shader_param/calibration_height = 2048.0
-shader_param/calibration_slope = -7.14292
-shader_param/calibration_pitch = 52.5865
-shader_param/calibration_center = 0.173492
-shader_param/calibration_dpi = 324.0
-shader_param/NUM_FRAMES = 45
-shader_param/screen = SubResource( 2 )
+}
