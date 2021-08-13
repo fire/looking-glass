@@ -14,7 +14,6 @@ int determine_view(float a) {
     int res = NUM_FRAMES - 1;
     a = mod(a, 1) * float(NUM_FRAMES);
     res -= int(a);
-	res = NUM_FRAMES - res;
     return res;
 }   
 

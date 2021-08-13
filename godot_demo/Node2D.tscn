@@ -18,8 +18,8 @@ script = null
 
 [node name="ColorRect" type="ColorRect" parent="."]
 material = SubResource( "ShaderMaterial_2uj00" )
-anchor_right = 1.0
-anchor_bottom = 1.0
+offset_right = 1536.0
+offset_bottom = 2048.0
 rect_min_size = Vector2(1536, 2048)
 script = ExtResource( "1" )
 __meta__ = {
