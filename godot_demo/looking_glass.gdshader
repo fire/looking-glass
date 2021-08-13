@@ -27,7 +27,13 @@ void fragment() {
 	float u = UV.x;
 	float v = UV.y;
     float a = (u + (1.0 - v)*tilt)*pitch - calibration_center;
-		
+	
+	// Change from coordinate system of the output uvs to the
+	// coordinate system of the tile uvs
+	// From 1536x2048 
+	// to 455x819
+	// TODO
+	
 	// Red
     int view = determine_view(a);
     float r = texture(screen, vec3(float(u), float(v), float(view))).r;

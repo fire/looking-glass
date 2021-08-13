@@ -1,30 +1,72 @@
-[gd_scene load_steps=5 format=3 uid="uid://cn0sndcyco14r"]
+[gd_scene load_steps=4 format=3 uid="uid://cn0sndcyco14r"]
 
 [ext_resource type="Script" path="res://ColorRect.gd" id="1"]
 [ext_resource type="Shader" path="res://looking_glass.gdshader" id="1_eq0xu"]
-[ext_resource type="StreamTexture2DArray" uid="uid://dld024brirkhd" path="res://demo/numbered_quilt.png" id="2_2cc11"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_2uj00"]
 shader = ExtResource( "1_eq0xu" )
-shader_param/calibration_width = 1536.0
-shader_param/calibration_height = 2048.0
-shader_param/calibration_slope = -7.14292
-shader_param/calibration_pitch = 52.5865
-shader_param/calibration_center = 0.173492
-shader_param/calibration_dpi = 324.0
-shader_param/NUM_FRAMES = 45
-shader_param/screen = ExtResource( "2_2cc11" )
+shader_param/calibration_width = null
+shader_param/calibration_height = null
+shader_param/calibration_slope = null
+shader_param/calibration_pitch = null
+shader_param/calibration_center = null
+shader_param/calibration_dpi = null
+shader_param/NUM_FRAMES = null
 
 [node name="Node2D" type="Node2D"]
 script = null
 
 [node name="ColorRect" type="ColorRect" parent="."]
 material = SubResource( "ShaderMaterial_2uj00" )
-offset_right = 1536.0
-offset_bottom = 2048.0
+anchor_right = 1.0
+anchor_bottom = 1.0
 rect_min_size = Vector2(1536, 2048)
 script = ExtResource( "1" )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-quilt = "res://demo/numbered_quilt.png"
+image_00 = "res://demo/raw/three_vrm_girl.00.png"
+image_01 = "res://demo/raw/three_vrm_girl.01.png"
+image_02 = "res://demo/raw/three_vrm_girl.02.png"
+image_03 = "res://demo/raw/three_vrm_girl.03.png"
+image_04 = "res://demo/raw/three_vrm_girl.04.png"
+image_05 = "res://demo/raw/three_vrm_girl.05.png"
+image_06 = "res://demo/raw/three_vrm_girl.06.png"
+image_07 = "res://demo/raw/three_vrm_girl.07.png"
+image_08 = "res://demo/raw/three_vrm_girl.08.png"
+image_09 = "res://demo/raw/three_vrm_girl.09.png"
+image_10 = "res://demo/raw/three_vrm_girl.10.png"
+image_11 = "res://demo/raw/three_vrm_girl.11.png"
+image_12 = "res://demo/raw/three_vrm_girl.12.png"
+image_13 = "res://demo/raw/three_vrm_girl.13.png"
+image_14 = "res://demo/raw/three_vrm_girl.14.png"
+image_15 = "res://demo/raw/three_vrm_girl.15.png"
+image_16 = "res://demo/raw/three_vrm_girl.16.png"
+image_17 = "res://demo/raw/three_vrm_girl.17.png"
+image_18 = "res://demo/raw/three_vrm_girl.18.png"
+image_19 = "res://demo/raw/three_vrm_girl.19.png"
+image_20 = "res://demo/raw/three_vrm_girl.20.png"
+image_21 = "res://demo/raw/three_vrm_girl.21.png"
+image_22 = "res://demo/raw/three_vrm_girl.22.png"
+image_23 = "res://demo/raw/three_vrm_girl.23.png"
+image_24 = "res://demo/raw/three_vrm_girl.24.png"
+image_25 = "res://demo/raw/three_vrm_girl.25.png"
+image_26 = "res://demo/raw/three_vrm_girl.26.png"
+image_27 = "res://demo/raw/three_vrm_girl.27.png"
+image_28 = "res://demo/raw/three_vrm_girl.28.png"
+image_29 = "res://demo/raw/three_vrm_girl.29.png"
+image_30 = "res://demo/raw/three_vrm_girl.30.png"
+image_31 = "res://demo/raw/three_vrm_girl.31.png"
+image_32 = "res://demo/raw/three_vrm_girl.32.png"
+image_33 = "res://demo/raw/three_vrm_girl.33.png"
+image_34 = "res://demo/raw/three_vrm_girl.34.png"
+image_35 = "res://demo/raw/three_vrm_girl.35.png"
+image_36 = "res://demo/raw/three_vrm_girl.36.png"
+image_37 = "res://demo/raw/three_vrm_girl.37.png"
+image_38 = "res://demo/raw/three_vrm_girl.38.png"
+image_39 = "res://demo/raw/three_vrm_girl.39.png"
+image_40 = "res://demo/raw/three_vrm_girl.40.png"
+image_41 = "res://demo/raw/three_vrm_girl.41.png"
+image_42 = "res://demo/raw/three_vrm_girl.42.png"
+image_43 = "res://demo/raw/three_vrm_girl.43.png"
+image_44 = "res://demo/raw/three_vrm_girl.44.png"

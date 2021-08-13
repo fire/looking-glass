@@ -7,14 +7,6 @@ python ../../make_quilt.py ./three_vrm_girl_quilt.png 5 9 raw/three_vrm_girl.%02
 python ../../quilt2native.py ../../visual.default.json  ./three_vrm_girl_quilt.png 5 9 three_vrm_girl_native.png
 ```
 
-
-Testing Quilt.
-
-```
-python ../../gen_numbers_quilt.py 5 9 ./numbered_quilt.png 4096 4096
-```
-
-
 Tiles to Native.
 
 ```
