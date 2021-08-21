@@ -18,7 +18,7 @@ config/icon="res://icon.png"
 
 window/size/width=1536
 window/size/height=2048
-window/size/borderless=true
+window/size/resizable=false
 window/dpi/allow_hidpi=true
 window/stretch/mode="viewport"
 window/stretch/aspect="keep_width"
